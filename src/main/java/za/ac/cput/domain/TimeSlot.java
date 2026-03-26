@@ -1,3 +1,9 @@
+/* TimeSlot.java
+   TimeSlot model class
+   Author: Redah Gamieldien (222641681)
+   Date: 25 March 2025
+ */
+
 package za.ac.cput.domain;
 
 import java.time.LocalDate;
@@ -21,7 +27,7 @@ public class TimeSlot {
 
 
     //Private constructor for Builder pattern.
-    public TimeSlot(Builder builder){
+    private TimeSlot(Builder builder){
         this.slotId = builder.slotId;
         this.startTime = builder.startTime;
         this.endTime = builder.endTime;
@@ -44,20 +50,6 @@ public class TimeSlot {
     /** Returns true if the slot is currently booked. */
     public boolean isBooked() {return isBooked;}
 
-    /** Marks this slot as booked. */
-    public void reserved() {
-        isBooked = true;
-    }
-
-    /** Releases this slot, making it available again. */
-    public void release() {
-        isBooked = false;
-    }
-
-    /** Returns true if the slot is not booked. */
-    public boolean isAvailable() {
-        return !isBooked;
-    }
 
     /**
      * Builder for constructing TimeSlot instances step by step.

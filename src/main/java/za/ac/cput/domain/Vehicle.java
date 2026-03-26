@@ -1,3 +1,9 @@
+/* Vehicle.java
+   Vehicle model class
+   Author: Redah Gamieldien (222641681)
+   Date: 25 March 2025
+ */
+
 package za.ac.cput.domain;
 
 /**
@@ -16,7 +22,7 @@ public class Vehicle {
     }
 
     //Private constructor for Builder pattern.
-    public Vehicle(Builder builder){
+    private Vehicle(Builder builder){
         this.vehicleID = builder.vehicleID;
         this.model = builder.model;
         this.regNumber = builder.regNumber;

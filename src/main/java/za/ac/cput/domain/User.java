@@ -59,7 +59,6 @@ public class User {
         private String username;
         private String password;
         private String email;
-        private String role;
 
         // Setter methods for Builder, returns a builder for chaining
         public Builder setUserId(int userId) {
