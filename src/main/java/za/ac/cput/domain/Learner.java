@@ -1,16 +1,16 @@
 /* Learner.java
 Learner model class
-Author: Ethan WIlliams(221454780)
+Author: Ethan Williams(221454780)
 Date: 25 March 2026
 */
 package za.ac.cput.domain;
 
 import java.time.LocalDate;
 
-/**
- * The Learner class represents a learner entity in the system.
- * It stores learner-related information and uses the Builder pattern.
- */
+
+ // The Learner class represents a learner entity in the system.
+ //It stores learner-related information and uses the Builder pattern.
+
 public class Learner {
     private String learnerId;
     private String learnerNumber;
@@ -18,15 +18,13 @@ public class Learner {
     private LocalDate dateRegistered;
     private String userId;
 
-    /**
-     * Default constructor
-     */
+    //Default constructor
     public Learner() {
 
     }
-    /**
-     * Constructor that initializes fields using the Builder
-     */
+
+    //Constructor that initializes fields using the Builder
+
     private Learner(Builder builder) {
         this.learnerId = builder.learnerId;
         this.learnerNumber = builder.learnerNumber;
@@ -35,8 +33,7 @@ public class Learner {
         this.userId = builder.userId;
     }
 
-    // Getter methods
-
+   //Getter methods
     public String getLearnerId() {
         return learnerId;
     }
@@ -57,9 +54,8 @@ public class Learner {
         return userId;
     }
 
-    /**
-     * Static Builder class for constructing Learner objects
-     */
+    //Static Builder class for constructing Learner objects
+
     public static class Builder {
 
         private String learnerId;
@@ -68,6 +64,7 @@ public class Learner {
         private LocalDate dateRegistered;
         private String userId;
 
+       //Setter methods
         public Builder setLearnerId(String learnerId) {
             this.learnerId = learnerId;
             return this;
@@ -93,9 +90,8 @@ public class Learner {
             return this;
         }
 
-        /**
-         * Copies values from an existing Learner object
-         */
+        // Copies values from an existing Learner object
+
         public Builder copy(Learner learner) {
             this.learnerId = learner.learnerId;
             this.learnerNumber = learner.learnerNumber;
@@ -105,9 +101,8 @@ public class Learner {
             return this;
         }
 
-        /**
-         * Builds and returns a Learner object
-         */
+        // Builds and returns a Learner object
+
         public Learner build() {
             return new Learner(this);
         }
