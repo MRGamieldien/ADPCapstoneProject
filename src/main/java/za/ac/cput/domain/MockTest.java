@@ -1,4 +1,7 @@
-/* MockTest.java  MockTest model class Author Angelo Adams (230450431) Date: 25 March 2026 */
+/* MockTest.java 
+MockTest model class
+Author Angelo Adams (230450431)
+Date: 25 March 2026 */
 package za.ac.cput.domain;
 
 //imports
