@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ff3e80d-f902-42ab-929e-77a12ac891b5" name="Changes" comment="Fixed errors in Booking and LessonType aswell as the factories. I also done the tests. Review and give me feedback please">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7ff3e80d-f902-42ab-929e-77a12ac891b5" name="Changes" comment="Fixed errors in Booking and LessonType aswell as the factories. I also done the tests. Review and give me feedback please" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,7 +135,7 @@
       <workItem from="1774515527907" duration="4807000" />
       <workItem from="1774520526815" duration="6317000" />
       <workItem from="1774562250480" duration="9000000" />
-      <workItem from="1774601610293" duration="470000" />
+      <workItem from="1774601610293" duration="781000" />
     </task>
     <task id="LOCAL-00001" summary="Ive completed the Booking and the Lesson Type using the builder pattern. Please check if its correct and let me know if it needs work.">
       <option name="closed" value="true" />
@@ -179,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774601929987</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fixed errors in Booking and LessonType aswell as the factories. I also done the tests. Review and give me feedback please">
+      <option name="closed" value="true" />
+      <created>1774602274110</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1774602274110</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
