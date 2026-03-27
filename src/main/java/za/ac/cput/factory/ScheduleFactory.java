@@ -1,7 +1,7 @@
 /* ScheduleFactory.java  
 ScheduleFactory model class 
 Author Angelo Adams (230450431) 
-Date: 04 March 2026 */
+Date: 27 March 2026 */
 package za.ac.cput.factory;
 
 import za.ac.cput.domain.MockTest;
@@ -10,7 +10,7 @@ import za.ac.cput.util.Helper;
 
 import java.time.LocalDate;
 
-//SCheduleFactory class
+//ScheduleFactory class
  
  // Responsible for creating schedule objects with validation.
 public class ScheduleFactory {
@@ -19,7 +19,6 @@ public class ScheduleFactory {
 // Validate scheduleId , instructorId, date & status (must not be null or empty)
         if (Helper.isNullOrEmpty(scheduleId)
             || Helper.isNullOrEmpty(instructorId)
-           
                || Helper.isNullOrEmpty(status)){
            
             
