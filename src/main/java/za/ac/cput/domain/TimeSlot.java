@@ -9,10 +9,7 @@ package za.ac.cput.domain;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-
-/**
- * Represents a bookable time slot for a driving lesson.
- */
+ // Represents a bookable time slot for a driving lesson.
 public class TimeSlot {
     private String slotId;
     private LocalTime startTime;
@@ -35,25 +32,24 @@ public class TimeSlot {
         this.isBooked = builder.isBooked;
     }
 
-    /** Returns the unique slot ID. */
+    // Returns the unique slot ID. 
     public String getSlotId() {return slotId;}
 
-    /** Returns the start time of the slot. */
+    // Returns the start time of the slot. 
     public LocalTime getStartTime() {return startTime;}
 
-    /** Returns the end time of the slot. */
+    // Returns the end time of the slot. 
     public LocalTime getEndTime() {return endTime;}
 
-    /** Returns the date of the slot. */
+    // Returns the date of the slot. 
     public LocalDate getDate() {return date;}
 
-    /** Returns true if the slot is currently booked. */
+    ///Returns true if the slot is currently booked. 
     public boolean isBooked() {return isBooked;}
 
 
-    /**
-     * Builder for constructing TimeSlot instances step by step.
-     */
+   
+   // Builder for constructing TimeSlot instances step by step.
     public static class Builder{
         private String slotId;
         private LocalTime startTime;
