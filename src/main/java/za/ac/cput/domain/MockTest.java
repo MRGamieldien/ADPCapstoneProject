@@ -65,7 +65,12 @@ public class MockTest {
             this.passed = mockTest.passed;
             return this;
         }
-
+ /**
+         * Builds and returns a newMockTest object.
+         * This method validates  and creates the immutable Schedule
+         
+         * @return A new MockTest object with the properties configured
+         */
         public MockTest build() {
 
             return new MockTest(this);
