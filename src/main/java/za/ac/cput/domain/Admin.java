@@ -5,25 +5,19 @@ Date: 25 March 2026
 */
 package za.ac.cput.domain;
 
-/**
- * The Admin class represents an administrator entity in the system.
- */
+//The Admin class represents an administrator entity in the system.
 public class Admin {
     private String adminId;
     private String department;
     private int accessLevel;
     private String userId;
 
-    /**
-     * Default constructor 
-     */
+    //Default constructor
     public Admin() {
 
     }
-  
-    /**
-     * Constructor that uses the Builder object to initialize fields
-     */
+    
+     // Constructor that uses the Builder object to initialize fields
     private Admin(Builder builder) {
         this.adminId = builder.adminId;
         this.department = builder.department;
@@ -49,9 +43,8 @@ public class Admin {
         return userId;
     }
 
-    /**
-     * Static Builder class that implements the Builder Design Pattern.
-     */
+   
+    // Static Builder class that implements the Builder Design Pattern.
     public static class Builder {
 
         private String adminId;
@@ -78,9 +71,8 @@ public class Admin {
             return this;
         }
 
-        /**
-         * Copies values from an existing Admin object
-         */
+        
+        //Copies values from an existing Admin object
         public Builder copy(Admin admin) {
             this.adminId = admin.adminId;
             this.department = admin.department;
@@ -89,9 +81,8 @@ public class Admin {
             return this;
         }
 
-        /**
-         * Builds and returns a new Admin object
-         */
+        
+        //Builds and returns a new Admin object
         public Admin build() {
             return new Admin(this);
         }
