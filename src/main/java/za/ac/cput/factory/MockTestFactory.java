@@ -1,7 +1,7 @@
 /* MockTestFactory.java  
 MockTestFactory model class 
 Author Angelo Adams (230450431) 
-Date: 04 March 2026 */
+Date: 27 March 2026 */
 package za.ac.cput.factory;
 
 //Imports
@@ -22,6 +22,10 @@ public class MockTestFactory {
             return null;
         }
 
+         if(dateTaken == null){
+            return null;
+        }
+     
         if (score < 0) {
             return null;
         }
