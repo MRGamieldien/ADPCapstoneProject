@@ -24,7 +24,6 @@ public class Learner {
     }
 
     //Constructor that initializes fields using the Builder
-
     private Learner(Builder builder) {
         this.learnerId = builder.learnerId;
         this.learnerNumber = builder.learnerNumber;
@@ -55,7 +54,6 @@ public class Learner {
     }
 
     //Static Builder class for constructing Learner objects
-
     public static class Builder {
 
         private String learnerId;
@@ -91,7 +89,6 @@ public class Learner {
         }
 
         // Copies values from an existing Learner object
-
         public Builder copy(Learner learner) {
             this.learnerId = learner.learnerId;
             this.learnerNumber = learner.learnerNumber;
@@ -102,7 +99,6 @@ public class Learner {
         }
 
         // Builds and returns a Learner object
-
         public Learner build() {
             return new Learner(this);
         }
