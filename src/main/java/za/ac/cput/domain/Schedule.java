@@ -59,10 +59,9 @@ public class Schedule {
             return this;
         }
 
-        /**
-         * Copies values from an existing Schedule object to the Builder.
-         * This method is used for creating modified copies of existing schedule types.
-        */
+        
+         // Copies values from an existing Schedule object to the Builder.
+         // This method is used for creating modified copies of existing schedule types.
         public Builder copy(Schedule schedule) {
             this.scheduleId = schedule.scheduleId;
             this.instructorId = schedule.instructorId;
@@ -70,12 +69,9 @@ public class Schedule {
             this.status = schedule.status;
             return this;
         }
- /**
-         * Builds and returns a new Schedule object.
-         * This method validates  and creates the immutable Schedule
-         
-         * @return A new Schedule object with the properties configured
-         */
+
+         // Builds and returns a new Schedule object.
+         // This method validates  and creates the immutable Schedule
         public Schedule build() {
             return new Schedule(this);
         }
