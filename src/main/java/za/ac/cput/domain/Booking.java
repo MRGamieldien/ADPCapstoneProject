@@ -3,31 +3,24 @@ Booking model class
 Author: Rameez Karriem (222357320)
 Date: 25 March 2026
 */
-
 package za.ac.cput.domain;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 
-/**
- * Represents a booking entity in the system.
- * It uses attributes like id, bookingdate, timeslot and status
- * Uses the Builder pattern for object construction.
- */
+// Immutable Booking entity with Builder pattern for flexible construction
 public class Booking {
-    private String bookingId;    
-    private LocalDate bookingDate;    
-    private LocalTime timeSlot;       
-    private String status;         
-    private String learnerId;        
-    private String instructorId;      
+    private String bookingId;      // Unique identifier for the booking
+    private LocalDate bookingDate; // Date of the booking
+    private String timeSlot;       // Time slot for the booking (as String)
+    private String status;         // Current status of the booking
+    private String learnerId;      // ID of the learner who made the booking
+    private String instructorId;   // ID of the instructor assigned to the booking
 
-    
-    //public default constructor.
+    // Public default constructor
     public Booking() {
     }
 
-    //Private constructor for Builder pattern.
+    // Private constructor called by Builder's build() method
     private Booking(Builder builder) {
         this.bookingId = builder.bookingId;
         this.bookingDate = builder.bookingDate;
@@ -37,60 +30,51 @@ public class Booking {
         this.instructorId = builder.instructorId;
     }
 
-    // Getters 
-
+    // Getters - no setters to maintain immutability
     public String getBookingId() {
         return bookingId;
     }
 
-   
     public LocalDate getBookingDate() {
         return bookingDate;
     }
 
-   
-    public LocalTime getTimeSlot() {
+    public String getTimeSlot() {
         return timeSlot;
     }
 
-  
     public String getStatus() {
         return status;
     }
 
-    
     public String getLearnerId() {
         return learnerId;
     }
 
-   
     public String getInstructorId() {
         return instructorId;
     }
-    
-   //Builder pattern
+
+    // Builder class for constructing Booking objects
     public static class Builder {
         private String bookingId;
         private LocalDate bookingDate;
-        private LocalTime timeSlot;
+        private String timeSlot;
         private String status;
         private String learnerId;
         private String instructorId;
 
-        // Setter methods for Builder, returns a builder for chaining
         public Builder setBookingId(String bookingId) {
             this.bookingId = bookingId;
-            return this;  
+            return this;
         }
 
-        
         public Builder setBookingDate(LocalDate bookingDate) {
             this.bookingDate = bookingDate;
             return this;
         }
 
-      
-        public Builder setTimeSlot(LocalTime timeSlot) {
+        public Builder setTimeSlot(String timeSlot) {
             this.timeSlot = timeSlot;
             return this;
         }
@@ -100,19 +84,17 @@ public class Booking {
             return this;
         }
 
-    
         public Builder setLearnerId(String learnerId) {
             this.learnerId = learnerId;
             return this;
         }
 
-   
         public Builder setInstructorId(String instructorId) {
             this.instructorId = instructorId;
             return this;
         }
 
-       
+        // Copies values from an existing Booking object to the Builder
         public Builder copy(Booking booking) {
             this.bookingId = booking.bookingId;
             this.bookingDate = booking.bookingDate;
@@ -123,7 +105,7 @@ public class Booking {
             return this;
         }
 
-       // builds the user object from the Builder
+        // Builds and returns a new Booking object
         public Booking build() {
             return new Booking(this);
         }
