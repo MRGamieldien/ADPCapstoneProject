@@ -58,7 +58,7 @@ public class MockTestFactoryTest {
         public void testCreateMockTestWithEmptyTestId() {
 
             MockTest mockTest = MockTestFactory.createMockTest(
-                    "A001",             // testID
+                    "",             // testID
                     "UT01", //learnerID
                     LocalDate.of(2026, 6,25 ),   // localdate
                     50,       // score
