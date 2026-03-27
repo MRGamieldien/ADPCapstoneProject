@@ -1,0 +1,251 @@
+Index: src/main/java/za/ac/cput/domain/Booking.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package za.ac.cput.domain;\r\n\r\n/**\r\n * Represents a booking entity in the system.\r\n * This class is immutable - once created, its state cannot be changed.\r\n * Uses the Builder pattern for object construction.\r\n */\r\npublic class Booking {\r\n    private String bookingId;      // Unique identifier for the booking\r\n    private String bookingDate;    // Date of the booking\r\n    private String timeSlot;       // Time slot for the booking (e.g., \"09:00-10:00\")\r\n    private String status;         // Current status of the booking (e.g., \"CONFIRMED\", \"CANCELLED\")\r\n    private int learnerId;         // ID of the learner who made the booking\r\n    private int instructorId;      // ID of the instructor assigned to the booking\r\n\r\n    /**\r\n     * Private default constructor.\r\n     * Prevents direct instantiation without using the Builder.\r\n     */\r\n    private Booking() {\r\n    }\r\n\r\n    /**\r\n     * Constructor that accepts a Builder object and initializes the Booking.\r\n     * This is called by the Builder's build() method.\r\n     *\r\n     * @param builder The Builder object containing the booking data\r\n     */\r\n    public Booking(Builder builder) {\r\n        this.bookingId = builder.bookingId;\r\n        this.bookingDate = builder.bookingDate;\r\n        this.timeSlot = builder.timeSlot;\r\n        this.status = builder.status;\r\n        this.learnerId = builder.learnerId;\r\n        this.instructorId = builder.instructorId;\r\n    }\r\n\r\n    // Getters - no setters provided to maintain immutability\r\n    // Once a Booking object is created, its fields cannot be modified\r\n\r\n    /**\r\n     * Gets the booking ID.\r\n     * @return The unique booking identifier\r\n     */\r\n    public String getBookingId() {\r\n        return bookingId;\r\n    }\r\n\r\n    /**\r\n     * Gets the booking date.\r\n     * @return The date of the booking\r\n     */\r\n    public String getBookingDate() {\r\n        return bookingDate;\r\n    }\r\n\r\n    /**\r\n     * Gets the time slot.\r\n     * @return The time slot for the booking\r\n     */\r\n    public String getTimeSlot() {\r\n        return timeSlot;\r\n    }\r\n\r\n    /**\r\n     * Gets the booking status.\r\n     * @return The current status of the booking\r\n     */\r\n    public String getStatus() {\r\n        return status;\r\n    }\r\n\r\n    /**\r\n     * Gets the learner ID.\r\n     * @return The ID of the learner who made the booking\r\n     */\r\n    public int getLearnerId() {\r\n        return learnerId;\r\n    }\r\n\r\n    /**\r\n     * Gets the instructor ID.\r\n     * @return The ID of the instructor assigned to the booking\r\n     */\r\n    public int getInstructorId() {\r\n        return instructorId;\r\n    }\r\n\r\n    /**\r\n     * Returns a string representation of the Booking object.\r\n     * @return A formatted string containing all booking details\r\n     */\r\n    @Override\r\n    public String toString() {\r\n        return \"Booking{\" +\r\n                \"bookingId='\" + bookingId + '\\'' +\r\n                \", bookingDate='\" + bookingDate + '\\'' +\r\n                \", timeSlot='\" + timeSlot + '\\'' +\r\n                \", status='\" + status + '\\'' +\r\n                \", learnerId=\" + learnerId +\r\n                \", instructorId=\" + instructorId +\r\n                '}';\r\n    }\r\n\r\n    /**\r\n     * Builder class for constructing Booking objects.\r\n     * Implements the Builder design pattern to allow flexible object creation\r\n     * while maintaining immutability of the final Booking object.\r\n     */\r\n    public static class Builder {\r\n        // Fields mirroring the Booking class\r\n        private String bookingId;\r\n        private String bookingDate;\r\n        private String timeSlot;\r\n        private String status;\r\n        private int learnerId;\r\n        private int instructorId;\r\n\r\n        /**\r\n         * Sets the booking ID.\r\n         * @param bookingId The unique booking identifier\r\n         * @return The current Builder instance (for method chaining)\r\n         */\r\n        public Builder setBookingId(String bookingId) {\r\n            this.bookingId = bookingId;\r\n            return this;  // Returns the Builder object for fluent interface\r\n        }\r\n\r\n        /**\r\n         * Sets the booking date.\r\n         * @param bookingDate The date of the booking\r\n         * @return The current Builder instance (for method chaining)\r\n         */\r\n        public Builder setBookingDate(String bookingDate) {\r\n            this.bookingDate = bookingDate;\r\n            return this;\r\n        }\r\n\r\n        /**\r\n         * Sets the time slot.\r\n         * @param timeSlot The time slot for the booking\r\n         * @return The current Builder instance (for method chaining)\r\n         */\r\n        public Builder setTimeSlot(String timeSlot) {\r\n            this.timeSlot = timeSlot;\r\n            return this;\r\n        }\r\n\r\n        /**\r\n         * Sets the booking status.\r\n         * @param status The current status of the booking\r\n         * @return The current Builder instance (for method chaining)\r\n         */\r\n        public Builder setStatus(String status) {\r\n            this.status = status;\r\n            return this;\r\n        }\r\n\r\n        /**\r\n         * Sets the learner ID.\r\n         * @param learnerId The ID of the learner making the booking\r\n         * @return The current Builder instance (for method chaining)\r\n         */\r\n        public Builder setLearnerId(int learnerId) {\r\n            this.learnerId = learnerId;\r\n            return this;\r\n        }\r\n\r\n        /**\r\n         * Sets the instructor ID.\r\n         * @param instructorId The ID of the assigned instructor\r\n         * @return The current Builder instance (for method chaining)\r\n         */\r\n        public Builder setInstructorId(int instructorId) {\r\n            this.instructorId = instructorId;\r\n            return this;\r\n        }\r\n\r\n        /**\r\n         * Copies values from an existing Booking object to the Builder.\r\n         * Useful for creating modified copies of existing bookings.\r\n         *\r\n         * @param booking The existing Booking object to copy from\r\n         * @return The current Builder instance (for method chaining)\r\n         */\r\n        public Builder copy(Booking booking) {\r\n            this.bookingId = booking.bookingId;\r\n            this.bookingDate = booking.bookingDate;\r\n            this.timeSlot = booking.timeSlot;\r\n            this.status = booking.status;\r\n            this.learnerId = booking.learnerId;\r\n            this.instructorId = booking.instructorId;\r\n            return this;\r\n        }\r\n\r\n        /**\r\n         * Builds and returns a new Booking object.\r\n         * This method creates the immutable Booking instance using the\r\n         * values set in the Builder.\r\n         *\r\n         * @returns A new Booking object with the configured properties\r\n         */\r\n        public Booking build() {\r\n            return new Booking(this);\r\n        }\r\n    }\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/za/ac/cput/domain/Booking.java b/src/main/java/za/ac/cput/domain/Booking.java
+--- a/src/main/java/za/ac/cput/domain/Booking.java	(revision 583d76632445b3dcb4740cd282589321fc265a73)
++++ b/src/main/java/za/ac/cput/domain/Booking.java	(date 1774560129545)
+@@ -1,3 +1,8 @@
++/* Booking.java
++Booking model class
++Author: Rameez Karriem (222357320)
++Date: 25 March 2026
++*/
+ package za.ac.cput.domain;
+ 
+ /**
+@@ -8,16 +13,15 @@
+ public class Booking {
+     private String bookingId;      // Unique identifier for the booking
+     private String bookingDate;    // Date of the booking
+-    private String timeSlot;       // Time slot for the booking (e.g., "09:00-10:00")
+-    private String status;         // Current status of the booking (e.g., "CONFIRMED", "CANCELLED")
+-    private int learnerId;         // ID of the learner who made the booking
+-    private int instructorId;      // ID of the instructor assigned to the booking
++    private String timeSlot;       // Time slot for the booking
++    private String status;         // Current status of the booking
++    private String learnerId;         // ID of the learner who made the booking
++    private String instructorId;      // ID of the instructor assigned to the booking
+ 
+     /**
+-     * Private default constructor.
+-     * Prevents direct instantiation without using the Builder.
++     * public default constructor.
+      */
+-    private Booking() {
++    public Booking() {
+     }
+ 
+     /**
+@@ -26,7 +30,7 @@
+      *
+      * @param builder The Builder object containing the booking data
+      */
+-    public Booking(Builder builder) {
++    private Booking(Builder builder) {
+         this.bookingId = builder.bookingId;
+         this.bookingDate = builder.bookingDate;
+         this.timeSlot = builder.timeSlot;
+@@ -74,7 +78,7 @@
+      * Gets the learner ID.
+      * @return The ID of the learner who made the booking
+      */
+-    public int getLearnerId() {
++    public String getLearnerId() {
+         return learnerId;
+     }
+ 
+@@ -82,26 +86,9 @@
+      * Gets the instructor ID.
+      * @return The ID of the instructor assigned to the booking
+      */
+-    public int getInstructorId() {
++    public String getInstructorId() {
+         return instructorId;
+     }
+-
+-    /**
+-     * Returns a string representation of the Booking object.
+-     * @return A formatted string containing all booking details
+-     */
+-    @Override
+-    public String toString() {
+-        return "Booking{" +
+-                "bookingId='" + bookingId + '\'' +
+-                ", bookingDate='" + bookingDate + '\'' +
+-                ", timeSlot='" + timeSlot + '\'' +
+-                ", status='" + status + '\'' +
+-                ", learnerId=" + learnerId +
+-                ", instructorId=" + instructorId +
+-                '}';
+-    }
+-
+     /**
+      * Builder class for constructing Booking objects.
+      * Implements the Builder design pattern to allow flexible object creation
+@@ -113,8 +100,8 @@
+         private String bookingDate;
+         private String timeSlot;
+         private String status;
+-        private int learnerId;
+-        private int instructorId;
++        private String learnerId;
++        private String instructorId;
+ 
+         /**
+          * Sets the booking ID.
+@@ -161,7 +148,7 @@
+          * @param learnerId The ID of the learner making the booking
+          * @return The current Builder instance (for method chaining)
+          */
+-        public Builder setLearnerId(int learnerId) {
++        public Builder setLearnerId(String learnerId) {
+             this.learnerId = learnerId;
+             return this;
+         }
+@@ -171,7 +158,7 @@
+          * @param instructorId The ID of the assigned instructor
+          * @return The current Builder instance (for method chaining)
+          */
+-        public Builder setInstructorId(int instructorId) {
++        public Builder setInstructorId(String instructorId) {
+             this.instructorId = instructorId;
+             return this;
+         }
+@@ -204,5 +191,4 @@
+             return new Booking(this);
+         }
+     }
+-}
+-
++}
+\ No newline at end of file
+Index: src/main/java/za/ac/cput/domain/LessonType.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package za.ac.cput.domain;\r\n\r\n/**\r\n * Represents a lesson type entity in the system.\r\n * Defines different categories of lessons available (e.g., \"Beginner Guitar\", \"Advanced Piano\").\r\n * This class is immutable - once created, its state cannot be changed.\r\n * Uses the Builder pattern for flexible object construction.\r\n */\r\npublic class LessonType {\r\n    private int lessonId;           // Unique identifier for the lesson type\r\n    private String typeName;        // Name of the lesson type (e.g., \"Guitar Basics\")\r\n    private double price;           // Price per lesson for this lesson type\r\n    private int duration;           // Duration of the lesson in minutes\r\n    private String description;     // Detailed description of the lesson type\r\n\r\n    /**\r\n     * Private default constructor.\r\n     * Prevents direct instantiation without using the Builder pattern.\r\n     */\r\n    private LessonType() {\r\n    }\r\n\r\n    /**\r\n     * Constructor that accepts a Builder object and initializes the LessonType.\r\n     * This constructor is called by the Builder's build() method.\r\n     *\r\n     * @param builder The Builder object containing the lesson type data\r\n     */\r\n    public LessonType(LessonType.Builder builder) {\r\n        this.lessonId = builder.lessonId;\r\n        this.typeName = builder.typeName;\r\n        this.price = builder.price;\r\n        this.duration = builder.duration;\r\n        this.description = builder.description;\r\n    }\r\n\r\n    // Getters - no setters provided to maintain immutability\r\n    // Once a LessonType object is created, its properties cannot be modified\r\n\r\n    /**\r\n     * Gets the lesson type ID.\r\n     * @return The unique identifier for this lesson type\r\n     */\r\n    public int getLessonId() {\r\n        return lessonId;\r\n    }\r\n\r\n    /**\r\n     * Gets the lesson type name.\r\n     * @return The name of the lesson type\r\n     */\r\n    public String getTypeName() {\r\n        return typeName;\r\n    }\r\n\r\n    /**\r\n     * Gets the lesson price.\r\n     * @return The price per lesson for this lesson type\r\n     */\r\n    public double getPrice() {\r\n        return price;\r\n    }\r\n\r\n    /**\r\n     * Gets the lesson duration.\r\n     * @return The duration of the lesson in minutes\r\n     */\r\n    public int getDuration() {\r\n        return duration;\r\n    }\r\n\r\n    /**\r\n     * Gets the lesson description.\r\n     * @return A detailed description of the lesson type\r\n     */\r\n    public String getDescription() {\r\n        return description;\r\n    }\r\n\r\n    /**\r\n     * Returns a string representation of the LessonType object.\r\n     * @return A formatted string containing all lesson type details\r\n     */\r\n    @Override\r\n    public String toString() {\r\n        return \"LessonType{\" +\r\n                \"lessonId=\" + lessonId +\r\n                \", typeName='\" + typeName + '\\'' +\r\n                \", price=\" + price +\r\n                \", duration=\" + duration +\r\n                \", description='\" + description + '\\'' +\r\n                '}';\r\n    }\r\n\r\n    /**\r\n     * Builder class for constructing LessonType objects.\r\n     * Implements the Builder design pattern to allow flexible, readable object creation\r\n     * while maintaining immutability of the final LessonType object.\r\n     *\r\n     */\r\n    public static class Builder {\r\n        private int lessonId;           // Unique identifier for the lesson type\r\n        private String typeName;        // Name of the lesson type\r\n        private double price;           // Price per lesson\r\n        private int duration;           // Duration in minutes\r\n        private String description;     // Detailed description\r\n\r\n        /**\r\n         * Sets the lesson type ID.\r\n         *\r\n         * @param lessonId The unique identifier for the lesson type\r\n         * @return The current Builder instance (for method chaining)\r\n         */\r\n        public Builder setLessonId(int lessonId) {\r\n            this.lessonId = lessonId;\r\n            return this;  // Returns the Builder object for fluent interface\r\n        }\r\n\r\n        /**\r\n         * Sets the lesson type name.\r\n         *\r\n         * @param typeName The name of the lesson type\r\n         * @return The current Builder instance (for method chaining)\r\n         */\r\n        public Builder setTypeName(String typeName) {\r\n            this.typeName = typeName;\r\n            return this;\r\n        }\r\n\r\n        /**\r\n         * Sets the lesson price.\r\n         *\r\n         * @param price The price per lesson for this lesson type\r\n         * @return The current Builder instance (for method chaining)\r\n         */\r\n        public Builder setPrice(double price) {\r\n            this.price = price;\r\n            return this;\r\n        }\r\n\r\n        /**\r\n         * Sets the lesson duration.\r\n         *\r\n         * @param duration The duration of the lesson in minutes\r\n         * @return The current Builder instance (for method chaining)\r\n         */\r\n        public Builder setDuration(int duration) {\r\n            this.duration = duration;\r\n            return this;\r\n        }\r\n\r\n        /**\r\n         * Sets the lesson description.\r\n         *\r\n         * @param description A detailed description of the lesson type\r\n         * @return The current Builder instance (for method chaining)\r\n         */\r\n        public Builder setDescription(String description) {\r\n            this.description = description;\r\n            return this;\r\n        }\r\n\r\n        /**\r\n         * Copies values from an existing LessonType object to the Builder.\r\n         * This method is useful for creating modified copies of existing lesson types.\r\n         * For example, to create a new lesson type with the same properties but\r\n         * a different price.\r\n         *\r\n         * @param lessontype The existing LessonType object to copy from\r\n         * @return The current Builder instance (for method chaining)\r\n         */\r\n        public Builder copy(LessonType lessontype) {\r\n            this.lessonId = lessontype.lessonId;\r\n            this.typeName = lessontype.typeName;\r\n            this.price = lessontype.price;\r\n            this.duration = lessontype.duration;\r\n            this.description = lessontype.description;\r\n            return this;\r\n        }\r\n\r\n        /**\r\n         * Builds and returns a new LessonType object.\r\n         * This method validates (if needed) and creates the immutable LessonType\r\n         * instance using the values configured in the Builder.\r\n         *\r\n         * @return A new LessonType object with the configured properties\r\n         */\r\n        public LessonType build() {\r\n            return new LessonType(this);\r\n        }\r\n    }\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/za/ac/cput/domain/LessonType.java b/src/main/java/za/ac/cput/domain/LessonType.java
+--- a/src/main/java/za/ac/cput/domain/LessonType.java	(revision 583d76632445b3dcb4740cd282589321fc265a73)
++++ b/src/main/java/za/ac/cput/domain/LessonType.java	(date 1774560325734)
+@@ -1,3 +1,8 @@
++/* LessonType.java
++LessonType model class
++Author: Rameez Karriem (222357320)
++Date: 25 March 2026
++*/
+ package za.ac.cput.domain;
+ 
+ /**
+@@ -7,17 +12,16 @@
+  * Uses the Builder pattern for flexible object construction.
+  */
+ public class LessonType {
+-    private int lessonId;           // Unique identifier for the lesson type
++    private String lessonId;           // Unique identifier for the lesson type
+     private String typeName;        // Name of the lesson type (e.g., "Guitar Basics")
+     private double price;           // Price per lesson for this lesson type
+     private int duration;           // Duration of the lesson in minutes
+     private String description;     // Detailed description of the lesson type
+ 
+     /**
+-     * Private default constructor.
+-     * Prevents direct instantiation without using the Builder pattern.
++     * Public default constructor.
+      */
+-    private LessonType() {
++    public LessonType() {
+     }
+ 
+     /**
+@@ -26,7 +30,7 @@
+      *
+      * @param builder The Builder object containing the lesson type data
+      */
+-    public LessonType(LessonType.Builder builder) {
++    private LessonType(LessonType.Builder builder) {
+         this.lessonId = builder.lessonId;
+         this.typeName = builder.typeName;
+         this.price = builder.price;
+@@ -41,7 +45,7 @@
+      * Gets the lesson type ID.
+      * @return The unique identifier for this lesson type
+      */
+-    public int getLessonId() {
++    public String getLessonId() {
+         return lessonId;
+     }
+ 
+@@ -77,21 +81,6 @@
+         return description;
+     }
+ 
+-    /**
+-     * Returns a string representation of the LessonType object.
+-     * @return A formatted string containing all lesson type details
+-     */
+-    @Override
+-    public String toString() {
+-        return "LessonType{" +
+-                "lessonId=" + lessonId +
+-                ", typeName='" + typeName + '\'' +
+-                ", price=" + price +
+-                ", duration=" + duration +
+-                ", description='" + description + '\'' +
+-                '}';
+-    }
+-
+     /**
+      * Builder class for constructing LessonType objects.
+      * Implements the Builder design pattern to allow flexible, readable object creation
+@@ -99,7 +88,7 @@
+      *
+      */
+     public static class Builder {
+-        private int lessonId;           // Unique identifier for the lesson type
++        private String lessonId;           // Unique identifier for the lesson type
+         private String typeName;        // Name of the lesson type
+         private double price;           // Price per lesson
+         private int duration;           // Duration in minutes
+@@ -111,7 +100,7 @@
+          * @param lessonId The unique identifier for the lesson type
+          * @return The current Builder instance (for method chaining)
+          */
+-        public Builder setLessonId(int lessonId) {
++        public Builder setLessonId(String lessonId) {
+             this.lessonId = lessonId;
+             return this;  // Returns the Builder object for fluent interface
+         }
+@@ -189,5 +178,4 @@
+             return new LessonType(this);
+         }
+     }
+-}
+-
++}
+\ No newline at end of file
+Index: src/main/java/za/ac/cput/util/Helper.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/za/ac/cput/util/Helper.java b/src/main/java/za/ac/cput/util/Helper.java
+new file mode 100644
+--- /dev/null	(date 1774559759669)
++++ b/src/main/java/za/ac/cput/util/Helper.java	(date 1774559759669)
+@@ -0,0 +1,9 @@
++
++package za.ac.cput.util;
++
++public class Helper {
++    //Checks whether a given string is null or empty.
++    public static boolean isNullOrEmpty(String value) {
++        return value == null || value.isEmpty();
++    }
++}
+\ No newline at end of file

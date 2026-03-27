@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7ff3e80d-f902-42ab-929e-77a12ac891b5" name="Changes" comment="Fixed errors in Booking and LessonType aswell as the factories. I also done the tests. Review and give me feedback please" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;RameezKarriem&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/RameezKarriem/ADPCapstoneProject.git&quot;,
+    &quot;accountId&quot;: &quot;d49be229-f520-43b0-98a6-0b7cb6c15750&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="3BTaTPgICVKo7EONHUe2lGqCYwp" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.BookingFactoryTest.createBooking.executor": "Run",
+    "JUnit.BookingFactoryTest.testCreateBookingWithEmptyFields.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "222357320",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ThinkPad/Documents/Capstone/ADPCapstoneProject",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="za.ac.cput.factory" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.BookingFactoryTest.testCreateBookingWithEmptyFields">
+    <configuration name="BookingFactoryTest.createBooking" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ADPCapstoneProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.factory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="za.ac.cput.factory" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.factory.BookingFactoryTest" />
+      <option name="METHOD_NAME" value="createBooking" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookingFactoryTest.testCreateBookingWithEmptyFields" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ADPCapstoneProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.factory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="za.ac.cput.factory" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.factory.BookingFactoryTest" />
+      <option name="METHOD_NAME" value="testCreateBookingWithEmptyFields" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BookingFactoryTest.testCreateBookingWithEmptyFields" />
+        <item itemvalue="JUnit.BookingFactoryTest.createBooking" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.30387.90" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7ff3e80d-f902-42ab-929e-77a12ac891b5" name="Changes" comment="" />
+      <created>1774515523615</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1774515523615</updated>
+      <workItem from="1774515527907" duration="4807000" />
+      <workItem from="1774520526815" duration="6317000" />
+      <workItem from="1774562250480" duration="9000000" />
+    </task>
+    <task id="LOCAL-00001" summary="Ive completed the Booking and the Lesson Type using the builder pattern. Please check if its correct and let me know if it needs work.">
+      <option name="closed" value="true" />
+      <created>1774517937345</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1774517937345</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Ive completed the Booking and the Lesson Type using the builder pattern. Please check if its correct and let me know if it needs work.">
+      <option name="closed" value="true" />
+      <created>1774522135274</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1774522135274</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Ive completed the BookingFactory and the LessonTypeFactory using the builder pattern. Please check if its correct and let me know if it needs work.">
+      <option name="closed" value="true" />
+      <created>1774560399777</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1774560399777</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fixed errors in Booking and LessonType aswell as the factories. I also done the tests. Review and give me feedback please">
+      <option name="closed" value="true" />
+      <created>1774601349521</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1774601349521</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Ive completed the Booking and the Lesson Type using the builder pattern. Please check if its correct and let me know if it needs work." />
+    <MESSAGE value="Ive completed the BookingFactory and the LessonTypeFactory using the builder pattern. Please check if its correct and let me know if it needs work." />
+    <MESSAGE value="Fixed errors in Booking and LessonType aswell as the factories. I also done the tests. Review and give me feedback please" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed errors in Booking and LessonType aswell as the factories. I also done the tests. Review and give me feedback please" />
+  </component>
+</project>
