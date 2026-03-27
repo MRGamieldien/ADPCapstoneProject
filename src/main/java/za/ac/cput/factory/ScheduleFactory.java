@@ -13,11 +13,11 @@ import za.ac.cput.util.Helper;
  // Responsible for creating schedule objects with validation.
 public class ScheduleFactory {
 
-    public static Schedule createSchedule(String scheduleId, String instructorId, String vehicleId, String status ){
+    public static Schedule createSchedule(String scheduleId, String instructorId, LocalDate date, String status ){
 // Validate scheduleId , instructorId, vehicleId & status (must not be null or empty)
         if (Helper.isNullOrEmpty(scheduleId)
             || Helper.isNullOrEmpty(instructorId)
-             || Helper.isNullOrEmpty(vehicleId)
+             || Helper.isNullOrEmpty(date)
                || Helper.isNullOrEmpty(status)){
            
             
@@ -28,7 +28,7 @@ public class ScheduleFactory {
 //build and return Schedule object using builder pattern
         return new Schedule.Builder().setScheduleId(scheduleId)
                 .setInstructorId(instructorId)
-                .setVehicleId(vehicleId)
+                .setVehicleId(date)
                 .setStatus(status)
                 .build();
     }
