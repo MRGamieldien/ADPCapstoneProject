@@ -19,7 +19,7 @@ public class ScheduleFactory {
             return null;
 
         }
-
+//build and return Schedule object using builder pattern
         return new Schedule.Builder().setScheduleId(scheduleId)
                 .setInstructorId(instructorId)
                 .setVehicleId(vehicleId)
