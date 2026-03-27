@@ -28,7 +28,7 @@ public class ScheduleFactory {
 //build and return Schedule object using builder pattern
         return new Schedule.Builder().setScheduleId(scheduleId)
                 .setInstructorId(instructorId)
-                .setVehicleId(date)
+                .setDate(date)
                 .setStatus(status)
                 .build();
     }
